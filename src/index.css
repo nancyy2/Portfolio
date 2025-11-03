@@ -1,0 +1,35 @@
+/* Custom dark techy styles, alongside Tailwind CDN utilities */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --accent:#7c3aed;
+  --accent-2:#06b6d4;
+  --glass: rgba(255,255,255,0.04);
+}
+
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+.section-title {
+  @apply text-2xl font-semibold mb-4 text-slate-100;
+}
+
+/* small utility for card glass */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+}
+
+/* project accent */
+.accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* responsive tweaks */
+@media (min-width: 1024px){
+  .hero-grid { display: grid; grid-template-columns: 1fr 420px; gap: 2rem; align-items: center; }
+}
